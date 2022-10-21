@@ -30,7 +30,7 @@ The following sections are inevitably related to each other, since all the techn
 
 ## Java writing conventions
 
-Code conventions exist because most of the cost of a program's code is used in its maintenance, (almost no program is kept with the original code for its entire life), and they improve the reading of the code allowing to understand new code much more fast and thorough. On the *Sun Microsystems* website, these conventions are included in a guide in [English](http://www.oracle.com/technetwork/java/codeconventions-150003.pdf), or a translation into [Spanish](http : //www.um.es/docencia/vjimenez/ficheros/practicas/Con ConvencionesCodigoJava.pdf) courtesy of *javaHispano*. Google has also recently created a [Style Guide](https://google.github.io/styleguide/javaguide.html#s1-introduction) for Java.
+Code conventions exist because most of the cost of a program's code is used in its maintenance, (almost no program is kept with the original code for its entire life), and they improve the reading of the code allowing to understand new code much faster and more thoroughly. On the *Sun Microsystems* website, these conventions are included in a guide in [English](http://www.oracle.com/technetwork/java/codeconventions-150003.pdf), or a translation into [Spanish](http : //www.um.es/docencia/vjimenez/ficheros/practicas/Con ConvencionesCodigoJava.pdf) courtesy of *javaHispano*. Google has also recently created a [Style Guide](https://google.github.io/styleguide/javaguide.html#s1-introduction) for Java.
 
 For the conventions to work, each programmer must try to be as faithful as possible to them.
 
@@ -202,7 +202,7 @@ In the following [web page](https://sourcemaking.com/refactoring) we have most o
 ## Good practices
 
 - **Strings handling**: Strings are objects, so creating them is expensive. It is much faster to instantiate them with an assignment, than with the *new* operator.
-  - Concatenating `String` with the '+' operator also generates a lot of load, since it creates a new` String` in memory (`String` objects are [immutable](https://curiotecnology.blogspot.com.es/2016 /10/because-string-is-inmutable-en-java.html)). You should always try to avoid concatenations (+) within a **loop**, or use other classes in that case (eg `StringBuilder`)
+  - Concatenating `String` with the '+' operator also generates a lot of load, since it creates a new` String` in memory (`String` objects are [immutable](https://curiotecnology.blogspot.com.es/2016 /10/because-string-is-inmutable-en-java.html)). You should always try to avoid concatenations (+) within a **loop**, or use other classes in that case (e.g. `StringBuilder`)
 
 ```java
 //instanciación lenta
@@ -330,8 +330,8 @@ Although a version control system can be done manually, it is highly advisable t
 
 A version control system should provide: 
 
-- Storage mechanism for the elements to be managed (eg text files, images, documentation ...).
-- Possibility of making changes to the stored elements (eg partial modifications, adding, deleting, renaming or moving elements).
+- Storage mechanism for the elements to be managed (e.g. text files, images, documentation ...).
+- Possibility of making changes to the stored elements (e.g. partial modifications, adding, deleting, renaming or moving elements).
 - Historical record of the actions carried out with each element or set of elements (usually being able to return or extract a previous state of the product).
 
 Although it is not strictly necessary, it is usually very useful to generate reports with the changes introduced between two versions, status reports, marking with an identifying name of the version of a set of files, etc.
@@ -371,7 +371,7 @@ The terminology used may vary from system to system, but some commonly used term
 
 **Check-out**: A deployment creates a local working copy from the repository. You can specify a specific revision, and by default you usually get the latest one.
 
-**"commit", "check-in", "ci", "install", "submit"**: A commit happens when a copy of the changes made to a local copy is written or embedded on repository.
+**"commit", "check-in", "ci", "install", "submit"**: A commit happens when a copy of the changes made to a local copy is written or embedded on a repository.
 
 **Conflict**: A conflict occurs in the following circumstances:
 
@@ -413,7 +413,7 @@ The system is unable to merge the changes. User **Ana** must resolve the conflic
 
 ## Repository
 
-A repository is basically a typical file server, with one big difference: what makes repositories special compared to those file servers is that they remember all the changes that have ever been written to them, in this way, every time we update the repository, it remembers every change made to the file or directory structure. In addition, it allows to establish additional information for each update, being able to have an example a changelog of the versions in the repository itself.
+A repository is basically a typical file server, with one big difference: what makes repositories special compared to those file servers is that they remember all the changes that have ever been written to them, in this way, every time we update the repository, it remembers every change made to the file or directory structure. In addition, it allows to establish additional information for each update, being able to have an example of a changelog of the versions in the repository itself.
 
 Each version control tool has its own repository, and unfortunately they are not interoperable, that is, you cannot get the data from the repository or update it if the repository and version control do not match. Actually, being a file server (special, but in essence it is the
 same), you could always directly access the files stored in the repository and obtain the code without major problem, but we will not have a version control over said code until we associate it to said repository with the appropriate version control.
